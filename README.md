@@ -1,4 +1,4 @@
-# UnCommonHacks2023
+# TheMadHatterProject --UnCommonHacks2023 
 
 ## Inspiration
 I think that I've grown older I've come to appreciate children books more and among them Alice in Wonderland has stayed a favorite of mine. Other than the nostalgia that binds me to it, Alice's struggle into adulthood I believe is one that carries with us, where we have to manage a balance between being childish and curious enough to consider ridiculous things but also thoughtful and mature enough to do what is right. I wanted to make this game because I've always loved Alice In Wonderland and it was also a cool way for me to expand my game dev skills.
