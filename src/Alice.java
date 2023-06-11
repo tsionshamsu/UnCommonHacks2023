@@ -2,25 +2,35 @@ import objectdraw.*;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.Vector; 
+import java.awt.image.BufferedImage;
 
 public class Alice extends ActiveObject implements Shootable{
 	
 	private DrawingCanvas canvas;
 	private VisibleImage alice;
+	private BufferedImage balice;
 	public boolean rightOn = false;
 	public boolean leftOn = false;
 	private static final int alice_WIDTH = 50;
 	private static final int alice_HEIGHT = 50;
-	private Enemies enemies;
+	private RedArmy enemies;
 	private boolean alive;
 	private FilledRect r;
 	private MadHatterProject main;
 	private Shootable target;
 
 	
-	public Alice(Image aliceImage, double x , double y, double w, double h, Enemies enemies, MadHatterProject main, DrawingCanvas canvas) {
+	public Alice(Image aliceImage, double x , double y, double w, double h, RedArmy enemies, MadHatterProject main, DrawingCanvas canvas) {
 		
 		alice = new VisibleImage(aliceImage, x, y, w, h, canvas);
+		this.canvas = canvas;
+		this.enemies = enemies;
+		this.main = main;
+		start();
+	}
+	public Alice(BufferedImage aliceImage, double x , double y, double w, double h, RedArmy enemies, MadHatterProject main, DrawingCanvas canvas) {
+		
+		balice = new BufferedImage((int)w, (int)h, BufferedImage.TYPE_INT_ARGB);
 		this.canvas = canvas;
 		this.enemies = enemies;
 		this.main = main;
@@ -44,6 +54,7 @@ public class Alice extends ActiveObject implements Shootable{
 		} 
 		return false;
 	}
+	
 
 
 	public void clear() {
@@ -82,5 +93,10 @@ public class Alice extends ActiveObject implements Shootable{
 			pause(40);
 		}
 		
+	}
+	
+	
+	public void UpdateAlice(Image alicechange) {
+		alice.setImage(alicechange);
 	}
 }
